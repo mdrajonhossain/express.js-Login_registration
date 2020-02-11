@@ -1,8 +1,11 @@
 var express = require('express');
-var session = require('express-session')
 
-const cookieParser = require('cookie-parser');
-// const session = require('express-session');
+ 
+
+ 
+
+
+
  
 var bcrypt = require('bcryptjs');
 var router = express.Router();
@@ -19,7 +22,9 @@ router.get('/registration', function(req, res, next) {
   res.render('registration');
 });
 
-
+router.get('/home', function(req, res, next) {
+  res.render('home');
+});
 
 router.post('/regi_form', async function(req, res, next) {
 	var email = req.body.email;
@@ -31,31 +36,51 @@ router.post('/regi_form', async function(req, res, next) {
 	var data = new models.instance.User({email:email, username:username, password:password});	
 	data.save();
 	res.redirect('/')
+
 });
 
 
 
 
-router.post('/loginpage', function(req, res){
-	var username = req.body.username;
-	var password = req.body.password;
 
-	models.instance.User.findOne({username:username},{raw:true, allow_filtering: true}, function(err, people){     			 	
+router.post('/loginpaging', function(req, res){
+	
+	var username = req.body.username1;
+	var password = req.body.password1;
+	 
+	models.instance.User.findOne({username:username},{raw:true, allow_filtering: true}, function(err, people){
+	// console.log("sdfdsf......"+people.password)     			 	
 
-		bcrypt.compare(password, people.password, function(err, res2) {
-		    if(res2 === true){
-		    	res.redirect('/home')
-		    }else{
-		    	res.redirect('/')
-		    }
-		});
+		var loginss = bcrypt.compareSync(password, people.password);
+
+	    	if (loginss === true) {
+	    		req.session.username = username;	    		 
+	     		res.redirect('/home');	     		 
+	    	} 
+	    	else {
+	    		res.redirect('/');
+	    	};
 	});   
 });
  
 
+
+
+router.get('/logoute', function(req, res, next) {	
+
+	req.session.destroy(function(err) {
+   		console.log("sss") 
+   		res.redirect('/');
+	});
+});
+
+
+
+ 
+
 module.exports = router;
+ 
+
+ 
 
 
-// req.session.save(function(err) {
-//   // session saved
-// })
