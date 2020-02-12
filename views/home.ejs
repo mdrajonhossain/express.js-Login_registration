@@ -5,314 +5,277 @@
 
     <title>Home</title>
     <link rel="icon" href="https://wfss001.freeli.io/common/freeli-logo.jpg" type="icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 
-
     <style type="text/css">
-        .imgradius{
+        .imgradius {
             border-radius: 40px;
         }
-    
-        .user-bar{
-          
-    width:100%;
-          background-color: lightgray;
-          height: 60px;
+        
+        .user-bar {
+            width: 100%;
+            background-color: lightgray;
+            height: 60px;
         }
-       .switch {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-
-  height: 20px;
-  width: 20px;
-  
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-  width:47px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+        
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        /* Rounded sliders */
+        
+        .slider.round {
+            border-radius: 34px;
+            width: 47px;
+        }
+        
+        .slider.round:before {
+            border-radius: 50%;
+        }
+        
+        @media (max-width: 768) {
+            #dropdown {
+                display: none;
+            }
+        }
 
     </style>
 </head>
 
 <body>
-  <ons-page>
-  
-     <ons-toolbar style="background-color: white;">
-     
-    <div class="left" style="margin-left:50px !important;font-size:18px;font-weight:600;color:#5CD4EF;">Connect</div>
-     <div class="center" style="margin-left: 0px !important;"><a href="/home" style="font-size:28px;font-weight:600; color:#103D67;text-decoration: none">WorkFreeli</a></div>
-    <div class="right" id="dropdown" style="margin-right: 50px !important">
-      <img src="images/profile.png" style="border-radius: 20px;"">
-     <i class="fas fa-angle-down"></i>
-    </div>
 
-  
-  
+    <ons-page>
 
-  </ons-toolbar>
-  <div class="row">
-    <div class="col-md-9"></div>
-    <div class="col-md-3">
-     <div id="show"  style="display: none;position: fixed;z-index:9999"class="bg-white" > 
+        <ons-toolbar style="background-color: white;">
 
- 
-                  <div  style="margin-right: 30px;">
-                    <ul style="list-style-type: none">
-                    <li><p>alamgirhossain@gmail.com 
-                      <i class="fas fa-cog"></i></p>
-                    </li>
-                    <li >
-                      <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round"></span>
-                    </label>
-                      <a href="" >Test Team </a>
-                    </li>
-                    <li >
-                      <label class="switch">
-                      <input type="checkbox">
-                      <span class="slider round"></span>
-                    </label>
-                      <a href="">OHS-Global</a>
-                    </li>
+            <div class="left" style="margin-left:50px !important;font-size:18px;font-weight:600;color:#5CD4EF;">Connect</div>
+            <div class="center" style="margin-left: 0px !important;"><a href="/home" style="font-size:28px;font-weight:600; color:#103D67;text-decoration: none">WorkFreeli</a></div>
+            <div class="right" id="dropdown" style="margin-right: 50px !important">
+                <img src="images/profile.png" style="border-radius: 20px;">
+                <i class="fas fa-angle-down"></i>
+            </div>
 
-                    <hr>
-                    <li  style="color:#5CD4EF;">Admin setting</li>
-                    <li style="color:#5CD4EF;">Change Password</li>
+        </ons-toolbar>
+        <div class="row">
+            <div class="col-md-9"></div>
+            <div class="col-md-3">
+                <div id="show" style="display:none;position: absolute;border-radius:7px;margin-top:3px;z-index:9999" class="bg-white">
 
-                         <hr>
+                    <ul style="list-style-type: none;padding:30px;">
+                        <li>
+                            <p>msrkhokoncse@gmail.com &nbsp;&nbsp;
+                                <i class="fas fa-cog"></i></p>
+                        </li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <a href="">Test Team </a>
+                        </li>
+                        <li>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            <a href="">OHS-Global</a>
+                        </li>
 
-                   </ul>
-               
-             <center><h4 ><a href="/logoute" style="color:red;text-decoration: none">Sign Out</a></h4></center>
-              </div>
+                        <hr>
+                        <li style="color:#5CD4EF;">Admin setting</li>
+                        <li style="color:#5CD4EF;">Change Password</li>
 
+                        <hr>
 
+                        <center>
+                            <h4><a href="/logoute" style="color:red;text-decoration: none">Sign Out</a></h4></center>
 
-   </div>
-   </div>
-         
-          
-      
-            
-            
-     
-  
-     </div>
-    </div>
-    <div class="row">
-      <div class="col-md-3">
-        
-    <ul class="navbar-light navbar-nav" style="height: 1200px; background: #023d67;position: absolute; padding: 0px 0px 0px 10px;">
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: yellow; font-size:20px">WorkFreeli Notification(s)</a></li>
-        <a class="" style="color: white; font-size:25px">Pinned</a>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User Name</a></li>
-        <a class="navbar-brand" href="" style="color: white "><h4>Conversation(s)</h4></a>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User</a></li>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User</a></li>   
+                    </ul>
 
-    </ul>
-    </div>
-   
-     <div class="col-md-9">
-      <nav class="navbar navbar-expand-sm position-fixed " style="margin-left: -90px;width:100%;background-color: lightgray">
+                </div>
+            </div>
 
-  <!-- Links -->
-  <ul class="navbar-nav " style="color:#103D67;font-weight: 700;">
-    <li class="nav-item">
-      <a class="nav-link " id="" > <img src="images/user.png" style="border-radius: 20px;height: 40px;margin-top: -12px"> &nbsp;&nbsp;Anwar Ali</a>
-    </li>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-      <div style="background-color:#103D67;width:2px;height:23px;margin-top:7px"></span>
-    </li>
-   &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/call.png">
-    </li>
+        </div>
+        <ons-row>
+            <ons-col width="20%" style="background: #023d67;">
+                <div style="position: ;overflow: scroll;height:">
 
-      &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/video.png">
-    </li>
-     &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/pin.png">
-    </li>
-     &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/tag.png">
-    </li>
-       &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/search.png">
-    </li>
-       &nbsp;&nbsp;&nbsp;
-    <li class="nav-item">
-     <img class="imgradius" src="images/dot.png">
-    </li>
-    &nbsp;&nbsp;&nbsp;
-       <li class="nav-item">
-      <div style="background-color:#103D67;width:2px;height:23px;margin-top:7px"></span>
-    </li>
-      <li class="nav-item">
-        <a Class="nav-link">Files</a>
-   
-    </li>
+                    <div class="pull-right"><img src="image/search_icon_for_sidebar.svg">
 
-      <li class="nav-item">
-      <div style="background-color:#103D67;width:2px;height:23px;margin-top:7px"></span>
-    </li>
-      <li class="nav-item">
-   <a Class="nav-link">Checklist</a>
-    </li>
-      <li class="nav-item">
-   <a Class="nav-link"><span style="background:#5CD4EF;padding:3px 8px ;color:white;border:2px solid white">0/1</span></a>
-    </li>
+                        <img src="image/Capture.PNG">
 
+                    </div>
+                    <br>
+                    <hr style="background: white">
 
-     
-  </ul>
+                    <ul type="circle">
 
-</nav>
-</div>
-      </div>
-     
-    
-    
-   
-<!--   <div class="row">
+                        <li style="color: yellow; font-size:18px">
+                            WorkFreeli Notification(s) &nbsp; &nbsp;
+                        </li>
 
-<div class="col-md-3 " style="position: fixed;margin-top:0px; z-index:9999;overflow: scroll">
+                        <a class="" style="color: white; font-size:21px">Pinned</a>
 
-    <ul class="navbar-light navbar-nav" style="height: 1200px; background: #023d67; padding: 0px 0px 0px 10px;">
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: yellow; font-size:20px">WorkFreeli Notification(s)</a></li>
-        <a class="" style="color: white; font-size:25px">Pinned</a>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User Name</a></li>
-        <a class="navbar-brand" href="" style="color: white "><h4>Conversation(s)</h4></a>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User</a></li>
-        <li class="navbar-brand"><a class="nav-link" href="#" style="color: white; font-size:15px">User</a></li>         
-    </ul>
-    </div>
-   
+                        <li style="color: white; font-size:15px">Md. Sadequr Rahman-it's you!</li>
+                        <br>
+                        <li style="color: white; font-size:19px">Conversion(s)
+                        </li>
 
- center Document -->
-<!-- 
-   <div class="col-md-9 bg-info">         
-      <div class="user-bar">
-        
-      </div>   -->  
+                    </ul>
 
+                    <ul style="line-height:3em">
 
+                        <li style="color: white; font-size:15px">Test0001</li>
+                        <li style="color: white; font-size:15px">MD Maruf Hasan</li>
+                        <li style="color: white; font-size:15px">test0003</li>
+                        <li style="color: white; font-size:15px">MS Jubayer</li>
+                        <li style="color: white; font-size:15px">Anwar Ali</li>
+                        <li style="color: white; font-size:15px">Test0009999</li>
+                        <li style="color: white; font-size:15px">Fajleh Rabbi</li>
+                        <li style="color: white; font-size:15px">MS Jubayer</li>
 
-<!--   </div>
-</div>
-      -->
+                    </ul>
+                </div>
+            </ons-col>
 
+            <ons-col width="80%">
+                <ons-row>
+                    <ons-col width="100%">
+                        <nav class="navbar navbar-expand-sm  col-md-12" style="background: lightgray;position: fixed">
+                            <a href="#" class="navbar-brand">
+                                <a class="nav-link " id=""> <img src="images/user.png" style="border-radius: 20px;height: 40px;margin-top: -12px"> &nbsp;&nbsp;Anwar Ali
+                                </a>&nbsp;&nbsp;&nbsp;
+                                <i style="background-color:#103D67;width:2px;height:23px;"></i>
 
+                                <div class="navbar-nav">
+                                    <a href="#" class="nav-item nav-link "> <img class="imgradius" src="images/call.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/call.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/video.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/pin.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/tag.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/search.png"></a>
+                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/dot.png"></a>
 
+                                </div>
 
+                                <i style="background-color:#103D67;width:2px;height:23px;"></i>
 
+                                <a style="font-weight: bold;color:#023d67">Files</a>
 
+                                <i style="background-color:#103D67;width:2px;height:23px;"></i>
 
-   </ons-page>
-    
+                                <a Class="nav-link" style="font-weight: bold;color:#023d67">Checklist</a>
 
-   <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+                                <span style="background:#5CD4EF;padding:3px 8px ;color:white;border:2px solid white">0/1</span>
 
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>   
+                        </nav>
+
+                    </ons-col>
+                </ons-row>
+                <br>
+                <br>
+
+                <ons-row>
+                    <ons-col width="100%">
+                        <div style="background:black;width:100%">dfhjdgz</div>
+                    </ons-col>
+                </ons-row>
+
+            </ons-col>
+        </ons-row>
+
+    </ons-page>
+
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"></script>
 
-<script type="text/javascript">
-  $(function(){
+    <script type="text/javascript">
+        $(function() {
 
-$("#dropdown").click(function(){
-  $("#show").css("display","block");
-   
-})
+            $("#dropdown").click(function() {
+                $("#show").css("display", "block");
 
-$(document).mouseup(function(e) 
-{
-    var container = $("#show");
-    
+            })
 
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-        container.hide();
-       
-    }
-});
-  })
+            $(document).mouseup(function(e) {
+                var container = $("#show");
 
+                // if the target of the click isn't the container nor a descendant of the container
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    container.hide();
 
+                }
+            });
+        });
+        $(window).resize(function() {
+            if ($(window).width() <= 700) {
+                $(".rihght").hide();
 
-</script>
-
-
-   
+            }
+        });
+    </script>
 
 </body>
+
 </html>
- 
+
 </body>
 
 </html>
