@@ -60,15 +60,15 @@
             transition: .4s;
         }
         
-        input:checked + .slider {
+        input:checked+.slider {
             background-color: #2196F3;
         }
         
-        input:focus + .slider {
+        input:focus+.slider {
             box-shadow: 0 0 1px #2196F3;
         }
         
-        input:checked + .slider:before {
+        input:checked+.slider:before {
             -webkit-transform: translateX(26px);
             -ms-transform: translateX(26px);
             transform: translateX(26px);
@@ -89,7 +89,6 @@
                 display: none;
             }
         }
-
     </style>
 </head>
 
@@ -107,6 +106,7 @@
             </div>
 
         </ons-toolbar>
+
         <div class="row">
             <div class="col-md-9"></div>
             <div class="col-md-3">
@@ -139,7 +139,8 @@
                         <hr>
 
                         <center>
-                            <h4><a href="/logoute" style="color:red;text-decoration: none">Sign Out</a></h4></center>
+                            <h4><a href="/logoute" style="color:red;text-decoration: none">Sign Out</a></h4>
+                        </center>
 
                     </ul>
 
@@ -149,7 +150,7 @@
         </div>
         <ons-row>
             <ons-col width="20%" style="background: #023d67;">
-                <div style="position: ;overflow: scroll;height:">
+                <div style="position: ;overflow: scroll;height:100%">
 
                     <div class="pull-right"><img src="image/search_icon_for_sidebar.svg">
 
@@ -200,7 +201,7 @@
 
                                 <div class="navbar-nav">
                                     <a href="#" class="nav-item nav-link "> <img class="imgradius" src="images/call.png"></a>
-                                    <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/call.png"></a>
+
                                     <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/video.png"></a>
                                     <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/pin.png"></a>
                                     <a href="#" class="nav-item nav-link"> <img class="imgradius" src="images/tag.png"></a>
